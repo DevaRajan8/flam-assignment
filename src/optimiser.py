@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import differential_evolution
 
 # Importing our custom math engine
-from src.math_utils import l1_loss
+from math_utils import l1_loss
 
 def main():
     print("optimising the dataset")
