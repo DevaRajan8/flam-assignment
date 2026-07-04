@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "Non-linear optimization pipeline to extract hidden variables from a parametric curve using L1 distance minimization"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.11.0",
+    "pandas>=3.0.3",
+    "scipy>=1.18.0",
+]
