@@ -110,6 +110,8 @@ This custom spatial mapping successfully neutralized the randomized dataset, dri
 
 ## Final Results and Plots
 
+### Desmos Plot
+
 <img src="plots/desmos-graph.png" alt="alt text" width="400" />
 
 After implementing the spatial KD-Tree, the global optimizer successfully converged with a near-zero final $L_1$ Error of **0.026726**.
@@ -119,6 +121,8 @@ The optimal extracted parameters directly from the terminal output are:
 - **Theta ($\theta$):** 29.9997 degrees
 - **M:** 0.0300
 - **X:** 54.9986
+
+<img src="images/output.png" alt="alt text" width="600" />
 
 _(Note: These values mathematically converge on the exact parameters of θ = 30°, M = 0.03, and X = 55.)_
 
