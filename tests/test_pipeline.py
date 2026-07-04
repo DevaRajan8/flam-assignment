@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.spatial import cKDTree
-import pytest
 
 # Importing the core function
 from src.math_utils import generate_curve, l1_loss
