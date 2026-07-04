@@ -20,6 +20,36 @@ The assignment provided a dataset of 1,500 coordinates and required an algorithm
 
 ## Methodology & Technical Approach
 
+### Pipeline Architecture
+
+```mermaid
+graph LR
+    subgraph Data Pipeline
+        A[Raw Dataset xy_data.csv] -->|Shuffled Data| B(Spatial Partitioning scipy.spatial.cKDTree)
+        B --> C[(Target Point Cloud)]
+    end
+
+    subgraph Optimization Loop
+        D((Differential Evolution)) -->|Candidate Params θ, M, X| E[Parametric Curve Generator]
+        E --> F([Predicted Point Cloud])
+        F --> G{L1 Distance Manhattan Norm}
+        C -.->|Nearest Neighbor Query| G
+        G -->|Error Penalty| D
+    end
+
+    D ===>|Convergence| H((Optimal Parameters θ=30, M=0.03, X=55))
+
+    %% Styling
+    classDef data fill:#f9f6f0,stroke:#333,stroke-width:2px,color:#000;
+    classDef engine fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000;
+    classDef result fill:#e8f5e9,stroke:#388e3c,stroke-width:3px,color:#000;
+
+    class A,B,C data;
+    class D,E,F,G engine;
+    class H result;
+
+```
+
 ### 1. The Mathematical Engine (`math_utils.py`)
 
 The provided parametric equations were translated into a modular Python script using `numpy` for vectorized mathematical operations.
