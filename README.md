@@ -79,7 +79,7 @@ The optimal extracted parameters directly from the terminal output are:
 - **M:** 0.0300
 - **X:** 54.9986
 
-_(Note: These values mathematically converge on the exact parameters of $\theta = 30^\circ$, $M = 0.03$, and $X = 55$.)_
+_(Note: These values mathematically converge on the exact parameters of θ = 30°, M = 0.03, and X = 55.)_
 
 ### Desmos Verification String
 
