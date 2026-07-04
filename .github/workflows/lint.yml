@@ -31,4 +31,4 @@ jobs:
       - name: Run Tests
         run: |
           pip install pytest scipy
-          pytest test_pipeline.py
+          pytest tests/
