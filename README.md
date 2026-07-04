@@ -52,7 +52,7 @@ graph LR
 
 ---
 
-<img src="images/pipeline.png" alt="alt text" width="400" />
+<img src="images/pipeline.png" alt="alt text" width="500" />
 
 ### 1. The Mathematical Engine (`math_utils.py`)
 
@@ -126,7 +126,7 @@ _(Note: These values mathematically converge on the exact parameters of Î¸ = 30Â
 
 The plot below demonstrates the success of the spatial KD-Tree pipeline. The algorithm successfully ignored the randomized row indices and converged on the true global shape of the parametric curve.
 
-<img src="plots/actual_vs_predicted_overlay.png" alt="alt text" width="400" />
+<img src="plots/actual_vs_predicted_overlay.png" alt="alt text" width="500" />
 
 _The red line represents the dynamic output of the Differential Evolution optimizer, cutting precisely through the raw, shuffled target data._
 
