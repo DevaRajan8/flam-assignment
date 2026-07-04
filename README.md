@@ -50,6 +50,10 @@ graph LR
 
 ```
 
+---
+
+![System Architecture Pipeline](images/pipeline.png)
+
 ### 1. The Mathematical Engine (`math_utils.py`)
 
 The provided parametric equations were translated into a modular Python script using `numpy` for vectorized mathematical operations.
@@ -117,6 +121,14 @@ The optimal extracted parameters directly from the terminal output are:
 - **X:** 54.9986
 
 _(Note: These values mathematically converge on the exact parameters of θ = 30°, M = 0.03, and X = 55.)_
+
+## Visual Proof of Convergence
+
+The plot below demonstrates the success of the spatial KD-Tree pipeline. The algorithm successfully ignored the randomized row indices and converged on the true global shape of the parametric curve.
+
+![Final Optimization Overlay](plots/actual_vs_predicted_overlay.png)
+
+_The red line represents the dynamic output of the Differential Evolution optimizer, cutting precisely through the raw, shuffled target data._
 
 ### Desmos Verification String
 
