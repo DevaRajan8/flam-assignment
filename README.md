@@ -92,8 +92,13 @@ $$D_{L_1}(P_{pred}, P_{target}) = |x_{pred} - x_{target}| + |y_{pred} - y_{targe
 
 ### The Final Objective Function
 
-By bypassing array index constraints, the global optimizer minimizes the true spatial error across all $N$ generated points. The final mathematical objective function the algorithm minimizes is:
-$$\mathcal{L}_{total} = \frac{1}{N} \sum_{i=1}^{N} \min_{j \in \text{Target Cloud}} \left( |x_{pred}^{(i)} - x_{target}^{(j)}| + |y_{pred}^{(i)} - y_{target}^{(j)}| \right)$$
+By bypassing array index constraints, the global optimizer minimizes the true spatial error across all $N$ generated points.
+
+The final mathematical objective function the algorithm minimizes is:
+
+$$
+\mathcal{L}_{total} = \frac{1}{N} \sum_{i=1}^{N} \min_{j \in \text{Target Cloud}} \left( |x_{pred}^{(i)} - x_{target}^{(j)}| + |y_{pred}^{(i)} - y_{target}^{(j)}| \right)
+$$
 
 This custom spatial mapping successfully neutralized the randomized dataset, driving the mathematical error to the exact global minimum.
 
