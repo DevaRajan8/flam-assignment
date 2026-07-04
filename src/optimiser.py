@@ -1,12 +1,13 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 # Differential Evolution is a global optimizer, preventing us from getting stuck in sinusoidal local minima.
 from scipy.optimize import differential_evolution
 # KDTree allows us to calculate spatial distance regardless of how the target CSV is shuffled.
 from scipy.spatial import cKDTree
 
 # Importing our custom mathematical loss function and generator.
-from math_utils import l1_loss
+from math_utils import l1_loss,generate_curve
 
 def main():
     print("optimising the dataset")
@@ -67,6 +68,22 @@ def main():
     print(f"Optimal Theta:  {best_theta:.4f} degrees")
     print(f"Optimal M:      {best_M:.4f}")
     print(f"Optimal X:      {best_X:.4f}")
+    
+    x_pred, y_pred = generate_curve(t_target, best_theta, best_M, best_X)
+
+    # 3. Draw and save the plot
+    plt.figure(figsize=(12, 7))
+    plt.scatter(x_target, y_target, color='black', s=15, alpha=0.3, label='Actual Data (xy_data.csv)')
+    plt.plot(x_pred, y_pred, color='red', linewidth=3, label='Predicted Curve (Dynamic Optimizer Output)')
+
+    plt.title('Target Point Cloud vs. Converged Parametric Curve', fontsize=14, pad=15)
+    plt.xlabel('X Axis', fontsize=12)
+    plt.ylabel('Y Axis', fontsize=12)
+    plt.legend(fontsize=12, loc='lower right')
+    plt.grid(True, linestyle='--', alpha=0.6)
+
+    plt.savefig('actual_vs_predicted_overlay.png', dpi=300, bbox_inches='tight')
+    print("Plot saved")
 
     # Converting the final optimal theta to radians for the final LaTeX string generation.
     theta_rad = np.radians(best_theta)
