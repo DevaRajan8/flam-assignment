@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from scipy.optimize import differential_evolution
 # KDTree allows us to calculate spatial distance regardless of how the target CSV is shuffled.
 from scipy.spatial import cKDTree
-import matplotlib.patheffects as pe
 
 # Importing our custom mathematical loss function and generator.
 from math_utils import l1_loss,generate_curve
