@@ -1,6 +1,5 @@
 import numpy as np
 # Importing cKDTree to map our data as a physical 2D point cloud, bypassing row order entirely.
-from scipy.spatial import cKDTree
 
 def generate_curve(t, theta_deg, M, X):
     """Generates the curve and returns an array of (x, y) coordinates."""
