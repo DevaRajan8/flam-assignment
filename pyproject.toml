@@ -7,5 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.11.0",
     "pandas>=3.0.3",
+    "pytest>=9.1.1",
     "scipy>=1.18.0",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
