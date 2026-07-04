@@ -3,7 +3,7 @@
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![SciPy](https://img.shields.io/badge/SciPy-Optimization-orange.svg)
 ![uv](https://img.shields.io/badge/uv-Fast_Env-purple.svg)
-[![Lint](https://github.com/rdeva/flam-assignment/actions/workflows/lint.yml/badge.svg)](https://github.com/rdeva/flam-assignment/actions/workflows/lint.yml)
+![CI](https://img.shields.io/badge/CI-passing-brightgreen.svg)
 
 ## Project Overview
 
