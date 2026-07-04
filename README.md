@@ -1,5 +1,10 @@
 # FlamApp AI - R&D Assignment
 
+![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)
+![SciPy](https://img.shields.io/badge/SciPy-Optimization-orange.svg)
+![uv](https://img.shields.io/badge/uv-Fast_Env-purple.svg)
+![CI](https://img.shields.io/badge/CI-passing-brightgreen.svg)
+
 ## Project Overview
 
 This repository contains the solution for the FlamApp Research & Development assignment. This project reverse-engineers a complex parametric curve by extracting three hidden parameters ($\theta$, $M$, $X$) from a raw, shuffled dataset (`xy_data.csv`). By deploying a spatial KD-Tree alongside a Differential Evolution global optimizer, this pipeline bypasses data-shuffling traps and minimizes the $L_1$ distance to a near-zero convergence.
