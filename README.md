@@ -101,7 +101,7 @@ This custom spatial mapping successfully neutralized the randomized dataset, dri
 
 ## Final Results and Plots
 
-![alt text](plots/desmos-graph.png)
+<img src="plots/desmos-graph.png" alt="alt text" width="300" />
 
 After implementing the spatial KD-Tree, the global optimizer successfully converged with a near-zero final $L_1$ Error of **0.026726**.
 
